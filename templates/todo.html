@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"></style>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script>  
+$(document).ready(function(){
+    $('#to-do').DataTable();
+});
+</script>
+<title>To-Do Application</title>
+{% endblock%}
+
+{% block body %}
+<div class="pb-2 mt-4 mb-2 border-bottom">
+    <h1>To-Do Application</h1>
+</div>
+<div class="col pb-2 mt-4 mb-2">
+    <h3>About</h3>
+    <p class="text-justify">This is a simple implementation of a to-do application built with Flask, SQLite 3, jQuery, and Bootstrap 4. Users can create a task to add to the to-do list, as well as delete or update that task according to their needs.</p>
+</div>
+<div class="col">
+    <div class="jumbotron">
+        <h4 class="text-center">What task is on your mind?</h4>
+        <p class="text-center">Refer to the master table below to get a bird eye's view of your workflow.</p>
+        <form action='/todo' method='post'>
+            <div class="form-group row">
+                <input class="col form-control" id="task" type="text" name='content' placeholder='Enter Task' required>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-md-auto">
+    <table class="table table-hover" id="to-do">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-center">Task</th>
+                <th class="text-center">Time Added</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for task in tasks%}
+            <tr>
+                <td class="text-center align-middle">{{ task[1] }}</td>
+                <td class="text-center align-middle">{{ task[2] }}</td>
+                <td>
+                    <div class="text-center">
+                        <div class="btn-group" role="group"></div>
+                            <a class="btn btn-danger" href="/todo/delete/{{ task[0] }}" role="button">Delete</a>
+                            <a class="btn btn-info" href="/todo/update/{{ task[0] }}" role="button">Update</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        <tfoot>
+            <tr>
+                <th class="text-center">Task</th>
+                <th class="text-center">Time Added</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </tfoot>
+        </tbody>
+    </table>
+</div>
+{% endblock%}

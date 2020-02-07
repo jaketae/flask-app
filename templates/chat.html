@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Chat Web Application</title>
+<style>
+.scroll {
+    height: 340px;
+    overflow: auto;
+} 
+</style>
+{% endblock%}
+
+{% block body %}
+<div class="pb-2 mt-4 mb-2 border-bottom">
+    <h1>Chat Web Application</h1>
+</div>
+<div class="col pb-2 mt-4 mb-2">
+    <h3>About</h3>
+    <p class="text-justify">This is a simple implementation of a post logging mini-application using Flask, SQLite 3, and Bootstrap 4. Users can post what they want, and an automatic time stamp will be generated along with the entered content to log users' activities.</p>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="jumbotron">
+            <form action='/chat' name='form' method='post'>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">User Name</label>
+                    <input class="form-control" type="text" id="exampleFormControlTextarea1" placeholder="Type Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea2">Post</label>
+                    <textarea class="form-control" rows="3" name="post" id="exampleFormControlTextarea2" placeholder="Type Post" required></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+    <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center">Time Stamp</th>
+                        <th class="text-center">User Name</th>
+                        <th class="text-center">Comment</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="scroll">
+                <table class="table table-hover">
+                    <tbody>
+                        {% for post in posts %}
+                            <tr>
+                                <td class="text-center align-middle">{{ post[3] }}</td>
+                                <td class="text-center align-middle">{{ post[1] }}</td>
+                                <td class="text-center align-middle">{{ post[2] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

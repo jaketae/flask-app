@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update Task Page</title>
+{% endblock %}
+
+{% block body %}
+<div class="pb-2 mt-4 mb-2 border-bottom">
+    <h1>To-Do Application</h1>
+</div>
+<div class="col pb-2 mt-4 mb-2">
+    <h3>Update</h3>
+    <p class="text-justify">Update your task by editing the entry you submitted previously. The updated task will then show up on the to-do master table, as entered.</p>
+</div>
+<form action='/todo/update/{{ task[0] }}' method='post'>
+    <input type="text" value="{{ task[1] }}" name='content'>
+    <input type="submit" value='Update'>
+</form>
+{% endblock %}
