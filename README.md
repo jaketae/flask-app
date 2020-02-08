@@ -17,11 +17,11 @@ Below are screenshots taken from the website.
 
 The home page features a simple landing page with links to each application below.
 
-![ScreenShot](/screenshots/home.png)*Landing page*
+![ScreenShot](/screenshots/home.png)
 
 The chat application features a logging functioanlity implemented with a table and an input form.
 
-![ScreenShot](/screenshots/chat.png)*Chat application*
+![ScreenShot](/screenshots/chat.png)
 
 The to-do application allow users to specify tasks to be displayed in the master data table, as well as the ability to update or delete each task.
 
