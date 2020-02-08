@@ -15,9 +15,15 @@ sqlite3
 
 Below are screenshots taken from the website. 
 
-![ScreenShot](/screenshots/home.png)
+The home page features a simple landing page with links to each application below.
 
-![ScreenShot](/screenshots/chat.png)
+![ScreenShot](/screenshots/home.png)*Landing page*
+
+The chat application features a logging functioanlity implemented with a table and an input form.
+
+![ScreenShot](/screenshots/chat.png)*Chat application*
+
+The to-do application allow users to specify tasks to be displayed in the master data table, as well as the ability to update or delete each task.
 
 ![ScreenShot](/screenshots/to-do.png)
 
