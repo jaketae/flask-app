@@ -11,5 +11,16 @@ This repository contains source code for a simple web application I built using 
 flask
 sqlite3
 ```
+## Screenshots
+
+Below are screenshots taken from the website. 
+
+![ScreenShot](/screenshots/home.png)
+
+![ScreenShot](/screenshots/chat.png)
+
+![ScreenShot](/screenshots/to-do.png)
+
+
 
 More documentation to come. 
