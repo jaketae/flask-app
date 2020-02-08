@@ -1,13 +1,83 @@
 {% extends 'base.html' %}
 
 {% block head %}
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" /> -->
 <title>Flask App</title>
 {% endblock%}
 
 {% block body %}
-<h1>Flask API Web Application</h1>
-<h6>This is a dummy website created using the Flask API.</h6>
-<a href="/todo">A simple to-do web app</a>
-<br>
-<a href="/chat">A simple chat web app</a>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a sample website I created on my way to becoming an autodidactic in Flask. It features two web applications, each accessible through the menu bar above.</p>
+      <hr class="my-3">
+      <p>Bootstrap 4 was extensively utilized to complete this project. Little to no Javascript was used. The backend was implemented with SQLite 3 with Flask.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-5 pt-0">
+        <div class="col-md-9">
+            <h3 class="section-title-sub text-primary">About the Project</h3>
+            <h2 class="section-title mb-4">Motivation</h2>
+            <p><a href="https://www.palletsprojects.com/p/flask/">Flask</a> is a popular Python-based web framework used to efficiently deliver applications and services. I wanted to learn Flask to deploy neural network models built with <a href="https://www.tensorflow.org">TensorFlow</a> or <a href="https://keras.io">Keras</a> in the form of scalable web applications.</p>
+            <p>I also wanted to acquaint myself with the front-end workflow to see what it is like to be a full-stack developer. Through this project, I was able to glean an elementary understanding of how the front-end and backend interact in conjunction to deliever capable service to the user.</p>
+            <p>For the full story behind my journey, visit <a href="https://jaketae.github.io">my perosnal blog</a>.</p>
+        </div>
+        <div class="col-md-3">
+            <img src="/static/img/flask.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Chat App</h2>
+            <p>A simple chat application that logs all chat records by different users in counter-sequential order.</p>
+            <p><a class="btn btn-secondary" href="/chat" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-6">
+            <h2>To-Do App</h2>
+            <p>A simple to-do application where users can input tasks they want to accomplish. Inputted tasks can either be deleted or updated.</p>
+            <p><a class="btn btn-secondary" href="/todo" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p class="text-center">&copy; Jake Tae 2020</p>
+    </footer>
+</div> 
+
+
+<!-- 
+
+<section class="home-section section-hero overlay slanted" id="home-section">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1>We Are Scenic</h1>
+            <div class="mx-auto w-75">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quibusdam possimus quasi porro! Itaque?</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="site-section about-us-section" id="about-us-section">
+    <div class="container">
+      <div class="row mb-5 pt-0 site-section">
+        <div class="col-md-6 align-self-center">
+          <h3 class="section-title-sub text-primary">About Us</h3>
+          <h2 class="section-title mb-4">Who Are You Guys</h2>
+          <p>Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.</p>
+          <p>Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="footer-copyright text-center">© 2020 Copyright: Jake Tae</div> -->
+
 {% endblock%}
