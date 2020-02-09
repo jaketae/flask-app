@@ -46,9 +46,6 @@ def update(id):
         models.alter_task(id, task_content)
         return redirect('/todo')
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    return render_template('login.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
